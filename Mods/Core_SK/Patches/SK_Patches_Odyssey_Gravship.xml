@@ -49,4 +49,22 @@
 		</value>
 	</Operation>
 
+	<!-- Gravship scenario: add Hygiene 1 research and reinforced concrete blocks -->
+	<Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
+		<xpath>Defs/ScenarioDef[defName="TheGravship"]/scenario/parts</xpath>
+		<value>
+			<!-- Hygiene 1 research unlocked from start for water infrastructure -->
+			<li Class="ScenPart_StartingResearch">
+				<def>StartingResearch</def>
+				<project>DubsBadHygiene</project>
+			</li>
+			<!-- 25 reinforced concrete blocks for chem refinery -->
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>ReinforcedConcrete</thingDef>
+				<count>25</count>
+			</li>
+		</value>
+	</Operation>
+
 </Patch>
