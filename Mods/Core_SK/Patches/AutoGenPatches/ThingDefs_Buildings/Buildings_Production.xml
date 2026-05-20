@@ -745,7 +745,7 @@
                 <Flammability>1.0</Flammability>
                 <Cleanliness>-12</Cleanliness>
                 <Mass>1000</Mass>
-                <OutdoorWorkRateFactor>0.8</OutdoorWorkRateFactor>
+                <OutdoorWorkRateFactor>1.0</OutdoorWorkRateFactor>
             </statBases>
             <pathCost>90</pathCost>
             <size>(3,3)</size>
@@ -800,6 +800,21 @@
                 <li>Craft_B1</li>
             </researchPrerequisites>
             <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+        </value>
+    </Operation>
+
+    <!-- Remove workshop room role penalty from fueled smithy -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="FueledSmithy"]/building/workTableRoomRole</xpath>
+        <value>
+            <workTableRoomRole />
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="FueledSmithy"]/building/workTableNotInRoomRoleFactor</xpath>
+        <value>
+            <workTableNotInRoomRoleFactor>1.0</workTableNotInRoomRoleFactor>
         </value>
     </Operation>
 
